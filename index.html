@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>crow form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/crowsnest.js"></script>
+  </head>
+  <body>
+    <div class="l-main">
+      <header class="l-header"><h1>Crow Form</h1></header>
+      <main class="l-main-content">
+        <form class="crowForm form-column" action="php/crowsnest.php" method="post">
+          <div class="row">
+            <label class="required">Full Name:</label>
+            <input type="text" name="full name">
+          </div>
+          <div class="row">
+            <label class="required">Email:</label>
+            <input type="email" name="email">
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label class="required">phone:</label>
+              <input type="text" name="phone_1">
+              <input type="text" name="phone_2">-
+              <input type="text" name="phone_3">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label class="required">Does this form track check boxes?</label>
+              <label class="required" for="check_yes">yes</label>
+              <input type="checkbox" name="check_yes" value="yes">
+              <label class="required" for="check_no">no</label>
+              <input type="checkbox" name="check_no" value="no">
+              <label class="required" for="check_maybe">maybe</label>
+              <input type="checkbox" name="check_maybe" value="maybe">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label class="required">Street Address</label>
+              <input type="text" id="street" required="required">
+              <label class="required">Apt#</label>
+              <input type="text" id="apt">
+            </div>
+            <div class="form-group">
+              <label class="required">City</label>
+              <input type="text" id="city" required="required">
+              <label class="required">State</label>
+              <input type="text" id="state" required="required">
+              <label class="required">Zip</label>
+              <input type="text" id="zip" pattern="[0-9]{5}" required="required">
+            </div>
+          </div>
+
+          <div class="row">
+            <label>message</label>
+            <textarea rows="10"></textarea>
+          </div>
+
+          <div class="btn-cage">
+            <input type="submit" name="submit" value="submit" onclick=".js">
+          </div>
+        </form>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

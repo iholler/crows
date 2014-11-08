@@ -1,0 +1,39 @@
+body {
+  background-color: #fcfcfc;
+  font-size: 16px;
+}
+
+.l-main {
+  width: 400px;
+  margin:2em auto;
+
+}
+
+label {
+  display: block;
+  width: 75px;
+  padding: 5px;
+}
+
+input {
+  height: 2.25em;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input[type="checkbox"]{
+  width: 10%;
+}
+
+col-1 {width: 100px;}
+col-2 {width: 100px;}
+col-3 {width: 100px;}
+col-4 {width: 100px;}
+col-5 {width: 100px;}
+col-6 {width: 100px;}
+col-7 {width: 100px;}
+col-8 {width: 100px;}
+col-9 {width: 100px;}
+col-10 {width: 100px;}
+col-11 {width: 100px;}
+col-12 {width: 100px;}
