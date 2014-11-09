@@ -19,21 +19,29 @@
           </div>
           <div class="row">
             <div class="form-group">
-              <label class="required">phone:</label>
-              <input type="text" name="phone_1">
-              <input type="text" name="phone_2">-
-              <input type="text" name="phone_3">
+              <label class="required">Phone:</label>
+              <input type="text" name="phone_1" class="col-2" placeholder="(865)">
+              <input type="text" name="phone_2" class="col-2" placeholder="213">-
+              <input type="text" name="phone_3" class="col-4" placeholder="1234">
             </div>
           </div>
           <div class="row">
-            <div class="form-group">
-              <label class="required">Does this form track check boxes?</label>
-              <label class="required" for="check_yes">yes</label>
-              <input type="checkbox" name="check_yes" value="yes">
-              <label class="required" for="check_no">no</label>
-              <input type="checkbox" name="check_no" value="no">
-              <label class="required" for="check_maybe">maybe</label>
-              <input type="checkbox" name="check_maybe" value="maybe">
+            <div class="form-group check-group">
+              <h2 class="required">Does this form track check boxes?</h2>
+              <ul>
+                <li class="col-4 pull-left">
+                  <label class="required" for="check_yes">Yes</label>
+                  <input type="checkbox" name="check_yes" value="yes">
+                </li>
+                <li class="col-4 pull-left">
+                  <label class="required" for="check_no">No</label>
+                  <input type="checkbox" name="check_no" value="no">
+                </li>
+                <li class="col-4 pull-left">
+                  <label class="required" for="check_maybe">Maybe</label>
+                  <input type="checkbox" name="check_maybe" value="maybe">
+                </li>
+              </ul>
             </div>
           </div>
           <div class="row">
@@ -54,7 +62,7 @@
           </div>
 
           <div class="row">
-            <label>message</label>
+            <label>Message</label>
             <textarea rows="10"></textarea>
           </div>
 

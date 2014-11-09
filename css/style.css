@@ -1,6 +1,7 @@
 body {
-  background-color: #fcfcfc;
+  background-color: #666;
   font-size: 16px;
+  font-family: sans-serif;
 }
 
 .l-main {
@@ -11,7 +12,6 @@ body {
 
 label {
   display: block;
-  width: 75px;
   padding: 5px;
 }
 
@@ -19,21 +19,38 @@ input {
   height: 2.25em;
   border-radius: 4px;
   width: 100%;
+  background-color: #eeeeee;
 }
 
 input[type="checkbox"]{
-  width: 10%;
+  display: block;
+  float: left;
 }
 
-col-1 {width: 100px;}
-col-2 {width: 100px;}
-col-3 {width: 100px;}
-col-4 {width: 100px;}
-col-5 {width: 100px;}
-col-6 {width: 100px;}
-col-7 {width: 100px;}
-col-8 {width: 100px;}
-col-9 {width: 100px;}
-col-10 {width: 100px;}
-col-11 {width: 100px;}
-col-12 {width: 100px;}
+.check-group {text-align:center;}
+ul { list-style:none; }
+
+.pull-left { float:left; }
+
+.col-1 {width: 12%;}
+.col-2 {width: 30%}
+.col-3 {width: 40%}
+.col-4 {width: 33.333%;}
+.col-5 {width: 41.6666667%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.3333335%;}
+.col-8 {width: 100px;}
+.col-9 {width: 100px;}
+.col-10 {width: 100px;}
+.col-11 {width: 100px;}1.71428571
+.col-12 {width: 100px;}
+
+
+form {
+  display: block;
+  position: relative;
+  background-color: #fcfcfc;
+  padding: 25px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+}
