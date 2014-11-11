@@ -22,6 +22,11 @@ input {
   background-color: #eeeeee;
 }
 
+button {
+  width: 33%;
+  height: 2.25em;
+}
+
 input[type="checkbox"]{
   display: block;
   float: left;
@@ -53,4 +58,14 @@ form {
   padding: 25px;
   border: 1px solid #eeeeee;
   border-radius: 8px;
+}
+
+.testArea {
+  background-color: #f77f00;
+  padding: 25px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  position: fixed;
+  top: 5em;
+  left: 70%;
 }

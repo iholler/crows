@@ -1,8 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>crow form</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/crows.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
   </head>
   <body>
     <div class="l-main">
@@ -11,20 +14,19 @@
         <form class="crowForm form-column" action="php/crowsnest.php" method="post">
           <div class="row">
             <label class="required">Full Name:</label>
-            <input type="text" name="full name">
+            <input type="text" name="full_name" placeholder="Full Name">
           </div>
           <div class="row">
             <label class="required">Email:</label>
-            <input type="email" name="email">
+            <input type="email" name="email" placeholder="user@email.com">
           </div>
           <div class="row">
             <div class="form-group">
               <label class="required">Phone:</label>
-              <input type="text" name="phone_1" class="col-2" placeholder="(865)">
-              <input type="text" name="phone_2" class="col-2" placeholder="213">-
-              <input type="text" name="phone_3" class="col-4" placeholder="1234">
+              <input type="tel" name="phone" class="col-2" placeholder="(865) 213-1234">
             </div>
           </div>
+
           <div class="row">
             <div class="form-group check-group">
               <h2 class="required">Does this form track check boxes?</h2>
@@ -44,34 +46,44 @@
               </ul>
             </div>
           </div>
+          
           <div class="row">
             <div class="form-group">
               <label class="required">Street Address</label>
-              <input type="text" id="street" required="required">
+              <input type="text" id="street" placeholder="123 snoop dogg ln">
               <label class="required">Apt#</label>
-              <input type="text" id="apt">
+              <input type="text" id="apt" placeholder="123B">
             </div>
             <div class="form-group">
               <label class="required">City</label>
-              <input type="text" id="city" required="required">
+              <input type="text" id="city" placeholder="Knoxville">
               <label class="required">State</label>
-              <input type="text" id="state" required="required">
+              <input type="text" id="state" placeholder="TN">
               <label class="required">Zip</label>
-              <input type="text" id="zip" pattern="[0-9]{5}" required="required">
+              <input type="number" id="zip" pattern="[0-9]{5}" placeholder="12345">
             </div>
           </div>
+          
 
-          <div class="row">
+           <div class="row">
             <label>Message</label>
             <textarea rows="10"></textarea>
           </div>
 
           <div class="btn-cage">
-            <input type="submit" name="submit" value="submit" onclick=".js">
+            <button type="button" name="submit" value="submit">Submit</button>
           </div>
+
         </form>
+
       </main>
+      <div class="testArea">
+            
+          </div>
       <footer></footer>
     </div>
+
+    <script src="js/crows.js"></script>
+
   </body>
 </html>
