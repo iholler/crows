@@ -6,9 +6,11 @@ Form analytics. Track form interactions and display collected statistics via dyn
 core objective
 ==============
 
-• Easy to install and use
-• Compatible with existing HTML forms (no code change required)
-• Capable of tracking abandonment, user stats(location, browser, etc) and submitted values
+- Easy to install and use
+
+- Compatible with existing HTML forms (no code change required)
+
+- Capable of tracking abandonment, user stats(location, browser, etc) and submitted values
 
 to do
 =====
