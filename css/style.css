@@ -66,7 +66,7 @@ form, .testArea {
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,.2);
 }
 
-.testArea {
+#testArea {
   background-color: #f77f00;
   padding: 25px;
   border: 1px solid #eeeeee;
