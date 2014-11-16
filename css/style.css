@@ -33,7 +33,11 @@ input[type="checkbox"]{
 }
 
 .check-group {text-align:center;}
-ul { list-style:none; }
+ul {
+  list-style:none;
+  width: auto;
+  padding: 0;
+}
 
 .pull-left { float:left; }
 

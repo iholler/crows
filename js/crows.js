@@ -24,7 +24,14 @@ crows.jollyroger = {
         plank = new Object();
         plank.field = $(this);
         plank.name = plank.field.attr('name');
-        plank.value = plank.field.val();
+        plank.type = plank.field.attr('type');
+        if (plank.type == 'checkbox'){
+          plank.value = plank.field.is(':checked');
+        } else if (plank.type == 'radio') {
+          plank.value = plank.field.is(':checked') ? plank.field.val() : false ;
+        } else {
+          plank.value = plank.field.val();
+        }
         $planks.push(plank);
 
       });
