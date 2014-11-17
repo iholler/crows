@@ -7,9 +7,25 @@ crows.jollyroger = {
 
       this.$crowform = $('.crowform');
       this.$planks = [];
+      this.$plank_time = new Object();
       this.gatherPlanks();
       this.updateTestArea();
       this.setupTestInputs();
+      this.$timeStart = Date.now();
+      this.timeCapsule();
+      this.setupPlanks();
+    },
+
+    timeCapsule: function() {
+      var
+        $timeStart = crows.jollyroger.$timeStart;
+        // console.log($timeStart);
+        // $time = Date.now();
+
+        // // the event to time goes here:
+        // doSomethingForALongTime();
+        // var end = Date.now();
+        // var elapsed = end - start; // elapsed time in milliseconds
     },
 
     gatherPlanks: function() {
@@ -19,7 +35,8 @@ crows.jollyroger = {
         plank = new Object();
 
         while ($planks.length > 0){$planks.pop();} //empty the array
-
+        // var result = $.grep(myArray, function(e){ return e.id == id; });
+        // result[0].foo to get the value
       $('input, textarea, select').each(function(){
         plank = new Object();
         plank.field = $(this);
@@ -35,6 +52,60 @@ crows.jollyroger = {
         $planks.push(plank);
 
       });
+    },
+
+    setupPlanks: function() {
+      crows.jollyroger.gatherPlanks();
+      var $planks = crows.jollyroger.$planks;
+
+      for (var i = 0; i < $planks.length; i++) {
+
+        $planks[i].field.change(function(event){
+          var plank = $(event.target);
+          crows.jollyroger.captainsLog(event, plank, 'change');
+        });
+
+        $planks[i].field.focus(function(event){
+          var plank = $(event.target);
+          crows.jollyroger.captainsLog(event, plank, 'focus');
+        });
+
+        $planks[i].field.blur(function(event){
+          var plank = $(event.target);
+          crows.jollyroger.captainsLog(event, plank, 'blur');
+        });
+
+      }
+    },
+
+    captainsLog: function(event, plank, action){
+      var
+        $plank_time = crows.jollyroger.$plank_time,
+        plank_elapsed;
+
+      if (action == 'focus'){
+        $plank_time.start = new Date().getTime();
+
+        // console.log(plank_start);
+
+      }
+      if (action == 'blur'){
+        $plank_time.end = new Date().getTime();
+        console.log($plank_time.end);
+        plank_elapsed = ($plank_time.end - $plank_time.start);
+        console.log(plank_elapsed);
+      }
+
+
+      // console.log(event.target);
+      // console.log(plank);
+      // Log time form started
+      // Log time focused
+      // Log time blurred
+        // Log time elapsed
+      // Log time last input blurred
+      // Log input focus order
+      // Log validation errors qty and error message (js and php validation errors)
     },
 
     updateTestArea: function(){
@@ -55,8 +126,6 @@ crows.jollyroger = {
 }
 
 crows.jollyroger.init();
-
-
 /////// How will time logging be quantified? How will it benefit the end user?
 // Log time when entering input for the first time.
 // Log time between first contact with an input and
