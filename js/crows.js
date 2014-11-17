@@ -1,12 +1,14 @@
 'use strict';
 
 var crows = crows || {}
+
 crows.jollyroger = {
 
     init: function() {
 
       this.$crowform = $('.crowform');
       this.$planks = [];
+      this.$captainsLog = [];
       this.$plank_time = new Object();
       this.gatherPlanks();
       this.updateTestArea();
@@ -79,22 +81,60 @@ crows.jollyroger = {
     },
 
     captainsLog: function(event, plank, action){
+      // Keep ye eyes peeled, the seas are trecherous and without
+      // all in ship-shape we'll surely be sleepin' the belly of the sea.
+
+      crows.jollyroger.gatherPlanks();
       var
+        $planks = crows.jollyroger.$planks,
         $plank_time = crows.jollyroger.$plank_time,
+        $captainsLog = crows.jollyroger.$captainsLog;
+      var
         plank_elapsed;
 
       if (action == 'focus'){
-        $plank_time.start = new Date().getTime();
+        $plank_time.start = new Date();
 
         // console.log(plank_start);
 
       }
       if (action == 'blur'){
-        $plank_time.end = new Date().getTime();
-        console.log($plank_time.end);
+        $plank_time.end = new Date();
+        // console.log($plank_time.end);
         plank_elapsed = ($plank_time.end - $plank_time.start);
         console.log(plank_elapsed);
       }
+
+      // LOG INPUTS
+
+      // focus
+      // 	LOG
+      // 		action = focus;
+      // 		time-start
+      // blur
+      // 	LOG
+      // 		action = blur;
+      // 		input = value;
+      // 		$sequence('sea_current')
+      // 			i ++;
+      // 		$plank_time.end;
+      // 		$plank_time.elapsed;
+
+      // 	STORE
+      // 		all logs in $captainsLog.$planks.plank['log'];
+
+      // 			$captainsLog.$planks.plank['log'][0] // each interaction get it's own iteration object and logged attributes.
+      // 			{
+      // 				'action'   : 'blur',
+      // 				'inputID'  : 'phone_number',
+      // 				'sequence' : '1',
+      // 				'start'    : 11111,
+      // 				'end'      : 11119,
+      // 				'elapsed'  : 8
+      // 			}
+
+      // 	CLEAR
+      // 		$plank_time object
 
 
       // console.log(event.target);
@@ -126,6 +166,12 @@ crows.jollyroger = {
 }
 
 crows.jollyroger.init();
+
+
+crows.swabTheDeck = {}
+crows.shoveOff = {}
+crows.walkThePlank = {}
+
 /////// How will time logging be quantified? How will it benefit the end user?
 // Log time when entering input for the first time.
 // Log time between first contact with an input and
